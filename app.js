@@ -13,8 +13,8 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
 	res.render('index')
 });
-
-server = app.listen(3000);
+const port = process.env.PORT || 8080;
+server = app.listen(port);
 //initialize socket.io
 const io = require('socket.io')(server);
 //listen on every connection
