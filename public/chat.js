@@ -1,6 +1,8 @@
 $(function() {
 	//make connection
-	let socket = io.connect('http://localhost:3000');
+	//TODO fix url here
+	//var connectionURL = https://filip-chat.herokuapp.com/
+	let socket = io.connect('https://filip-chat.herokuapp.com/');
 
 	//buttons and inputs
 	let message = $("#message");
@@ -15,12 +17,10 @@ $(function() {
 	})
 	//Listen on new message
 	socket.on('new_message', (data) => {
-		console.log("data", data);
 		chatroom.append('<p class="message">' + data.username + ': ' + data.message + '</p>')
 	})
 	//Emit a username
 	send_username.click(function(){
-		console.log('click',username.val())
 		socket.emit('change_username', {username: username.val()});
 	});
 })
