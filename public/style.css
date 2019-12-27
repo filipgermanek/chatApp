@@ -1,11 +1,13 @@
-h1, button, input {
+body {
 	font-family: 'Lato', sans-serif;
+}
+h1, button, .message-bubble {
 	color: white;
 }
 h1 {
 	text-align: center;
 }
-header, button {
+header, button, .message-bubble {
 	background-color: #4E21C1;
 }
 button {
@@ -14,6 +16,7 @@ button {
 }
 body {
 	margin: 0;
+	padding-bottom: 24px;
 }
 .container {
 	display: flex;
@@ -24,7 +27,7 @@ body {
 	padding: 3px 8px;
 }
 .input-message {
-	width: 80%;
+	width: 500px
 }
 .send-button {
 	margin-left: 8px;
@@ -33,9 +36,16 @@ body {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
+	padding: 0 66px;
 }
 .chat-controls {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+}
+.message-bubble {
+	border: 1px solid black;
+	border-radius: 14px;
+	width: auto;
+	padding: 6 12px;
 }

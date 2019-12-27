@@ -16,7 +16,7 @@ $(function() {
 	})
 	//Listen on new message
 	socket.on('new_message', (data) => {
-		chatroom.append('<p class="message">' + data.username + ': ' + data.message + '</p>')
+		chatroom.append('<div class="message-bubble">' + data.username + ': ' + data.message + '</div>')
 	})
 	//Emit a username
 	send_username.click(function(){
