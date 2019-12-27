@@ -1,8 +1,7 @@
 $(function() {
 	//make connection
-	//TODO fix url here
-	//var connectionURL = https://filip-chat.herokuapp.com/
-	let socket = io.connect('https://filip-chat.herokuapp.com/');
+	let connectionUrl = window.location.hostname === 'localhost' ? 'http://localhost:8080' : 'https://filip-chat.herokuapp.com/';
+	let socket = io.connect(connectionUrl);
 
 	//buttons and inputs
 	let message = $("#message");

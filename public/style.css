@@ -1,8 +1,19 @@
 h1, button, input {
 	font-family: 'Lato', sans-serif;
+	color: white;
 }
 h1 {
 	text-align: center;
+}
+header, button {
+	background-color: #4E21C1;
+}
+button {
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+body {
+	margin: 0;
 }
 .container {
 	display: flex;
@@ -12,6 +23,12 @@ h1 {
 .input {
 	padding: 3px 8px;
 }
+.input-message {
+	width: 80%;
+}
+.send-button {
+	margin-left: 8px;
+}
 .chatroom {
 	display: flex;
 	flex: 1;
@@ -20,4 +37,5 @@ h1 {
 .chat-controls {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
